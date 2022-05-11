@@ -6,14 +6,16 @@ import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
-import com.android.volley.Response
+import com.fa.examen.adaptador.AdapdadorEvento
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.fa.prueba.adaptador.AdaptadorEvento
-import com.fa.prueba.modelo.Evento
+
+import com.fa.examen.modelo.Evento
+
+
 class MainActivity : AppCompatActivity() {
     lateinit var miRecycler: RecyclerView
-    lateinit var adaptador:AdaptadorEvento
+    lateinit var adaptador: AdapdadorEvento
     lateinit var listaEventos:ArrayList<Evento>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         miRecycler = findViewById(R.id.recyclerEventos)
 
-        adaptador = AdaptadorEvento(listaEventos)
+        adaptador = AdapdadorEvento(listaEventos)
 
         miRecycler.adapter = adaptador
 
@@ -44,10 +46,10 @@ class MainActivity : AppCompatActivity() {
                     eventoInJson.getString("date"), eventoInJson.getString("feature_image"))
                 listaEventos.add(evento)
             }
-            adaptador.notifyDataChanged()
-        },{
+            adaptador.notifyDataSetChanged()
+        },
+            {
                 Log.e("PersonajesApi","Error")
-            }
         })
     queue.add(objectRequest)
     }
