@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/ivPerfil"
-            android:layout_width="246dp"
-            android:layout_height="252dp"
+            android:layout_width="245dp"
+            android:layout_height="257dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="sans-serif-thin"
             android:text="ID"
             android:textAllCaps="false"
@@ -80,16 +80,33 @@
             android:textSize="14sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.012"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ID2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="ID:"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.007"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="135dp"
+            android:layout_height="44dp"
             android:layout_marginStart="11dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="sans-serif-thin"
             android:text="location"
             android:textAllCaps="false"
@@ -97,14 +114,14 @@
             android:textSize="12sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
             app:layout_constraintTop_toBottomOf="@+id/tv_ID" />
 
         <TextView
             android:id="@+id/tvDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="139dp"
+            android:layout_height="33dp"
             android:layout_marginStart="11dp"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-thin"
