@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             adaptador.notifyDataSetChanged()
         },
             {
-                Log.e("PersonajesApi","Error")
+                Log.e("EventosApi","Error")
         })
     queue.add(objectRequest)
     }
