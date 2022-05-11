@@ -1,8 +1,10 @@
 package com.fa.examen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var miRecycler: RecyclerView
     lateinit var adaptador: AdapdadorEvento
     lateinit var listaEventos:ArrayList<Evento>
+    lateinit var creditosBtn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,6 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         getPersonajes()
         miRecycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+
+
+
+        creditosBtn = findViewById(R.id.btnCreditos)
+        creditosBtn.setOnClickListener{
+            val viewCreditos = Intent(this, creditosA::class.java)
+            startActivity(viewCreditos)
+
+        }
 
     }
 
